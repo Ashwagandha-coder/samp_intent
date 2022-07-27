@@ -2,11 +2,12 @@ package com.example.intentsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +26,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(MainActivity.this, "Button was clicked", Toast.LENGTH_LONG).show();
+
+
+                Context context = MainActivity.this;
+
+                Class destinationActivity = ChildActivity.class;
+
+                Intent childActivity = new Intent(context,destinationActivity);
+
+                startActivity(childActivity);
 
             }
         });

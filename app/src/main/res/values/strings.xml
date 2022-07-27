@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IntentsApp</string>
+    <string name="intent">Перейти</string>
 </resources>

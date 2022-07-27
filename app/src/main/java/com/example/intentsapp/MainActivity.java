@@ -26,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                String string = textEntry.getText().toString();
 
                 Context context = MainActivity.this;
 
                 Class destinationActivity = ChildActivity.class;
 
                 Intent childActivity = new Intent(context,destinationActivity);
+                childActivity.putExtra(Intent.EXTRA_TEXT,string);
 
                 startActivity(childActivity);
 
